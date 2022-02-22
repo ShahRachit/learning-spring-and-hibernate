@@ -5,7 +5,10 @@
     xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans.xsd
     http://www.springframework.org/schema/context
-    http://www.springfrcom.learn2code.springdemo.BaseballCoachamework.org/schema/context/spring-context.xsd">
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    
+    <!-- load properties file -->
+    <context:property-placeholder location="classpath:sport.properties" />
 
     <!-- Define your beans here -->
     <bean id="myFortune"
@@ -25,8 +28,8 @@
 		<property name="fortuneService" ref="myFortune"></property>
 		
 		<!--inject literal values  -->
-		<property name="emailAddress" value="thesrh@ipl.com" />
-		<property name="team" value="Sunrisers Hyderabad"></property>
+		<property name="emailAddress" value="${foo.email}" />
+		<property name="team" value="${foo.team}"></property>
 		
 	</bean>
     
