@@ -18,5 +18,14 @@ public class TrackCoach implements Coach {
 		// TODO Auto-generated method stub
 		return "Just do it: " + fortuneService.getFortune();
 	}
-
+	
+	//init-method for bean lifecycle
+	public void myStartupStuff() {
+		System.out.println("Inside method myStartupStuff");
+	}
+	
+	//destroy-method for bean lifecycle
+	public void myShutdownStuff() {
+		System.out.println("Inside method myShutdownStuff");
+	}
 }
